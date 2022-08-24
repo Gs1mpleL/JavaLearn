@@ -11,7 +11,7 @@ public class DuiSort extends BaseData {
         // 构建堆
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int j : arr) {
-            queue.add(j);pPpp
+            queue.add(j);
         }
         // 每次出去一个数据，都会重新维护堆
         for (int i = 0; i < arr.length; i++) {
