@@ -1,7 +1,8 @@
 package com.wanfeng.javalearn;
 
-import com.wanfeng.javalearn.designPattern.strategy.DemoService;
-import com.wanfeng.javalearn.springEventListener.EventPublisher;
+import com.wanfeng.javalearn.设计模式.strategy.DemoService;
+import com.wanfeng.javalearn.监听.EventPublisher;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,7 +26,7 @@ public class JavaLearnApplication implements ApplicationContextAware {
     }
 
     @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    public void setApplicationContext(@NotNull ApplicationContext applicationContext) throws BeansException {
         JavaLearnApplication.applicationContext = applicationContext;
     }
 }
