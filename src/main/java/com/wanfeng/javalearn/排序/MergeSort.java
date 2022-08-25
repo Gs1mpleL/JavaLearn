@@ -19,7 +19,6 @@ public class MergeSort extends BaseData {
         sort(arr,left,mid,right);
     }
 
-    //归并方法
     public static void sort(int[] arr, int start, int mid, int end) {
         //左边分组的起点i_start，终点i_end，也就是第一个有序序列
         int i_start = start;
@@ -58,9 +57,7 @@ public class MergeSort extends BaseData {
             j_start++;
         }
         //辅助空间数据覆盖到原空间
-        for(int i=0;i<temp.length;i++){
-            arr[start+i]=temp[i];
-        }
+        System.arraycopy(temp, 0, arr, start, temp.length);
     }
 
 }
