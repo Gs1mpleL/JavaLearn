@@ -1,5 +1,6 @@
 package com.wanfeng.javalearn;
 
+import com.wanfeng.javalearn.kafka学习.KafkaProducer;
 import com.wanfeng.javalearn.设计模式.strategy.DemoService;
 import com.wanfeng.javalearn.监听.EventPublisher;
 import org.jetbrains.annotations.NotNull;
@@ -8,11 +9,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.kafka.annotation.EnableKafka;
 
 /**
  * @author liuzhuohao
  */
 @SpringBootApplication
+@EnableKafka
 public class JavaLearnApplication implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
 
@@ -23,10 +26,13 @@ public class JavaLearnApplication implements ApplicationContextAware {
         demoService.getStrategy("A").doStrategy();
         EventPublisher eventPublisher = applicationContext.getBean("eventPublisher", EventPublisher.class);
         eventPublisher.publishEvent("消息");
+
     }
 
     @Override
     public void setApplicationContext(@NotNull ApplicationContext applicationContext) throws BeansException {
         JavaLearnApplication.applicationContext = applicationContext;
     }
+
+
 }

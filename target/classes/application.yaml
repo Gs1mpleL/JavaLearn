@@ -4,7 +4,23 @@ spring:
     username: root
     password: liuzhuohao123
 
-    #mybatis-plus配置控制台打印完整带参数SQL语句
+  kafka:
+    # 地址
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      # 消费者组
+      group-id: test-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+
+
+
+#mybatis-plus配置控制台打印完整带参数SQL语句
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
