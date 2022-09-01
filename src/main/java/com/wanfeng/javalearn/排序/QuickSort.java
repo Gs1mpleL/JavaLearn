@@ -21,16 +21,16 @@ public class QuickSort extends BaseData{
             while (lp!=rp && arr[lp] < baseNum){
                 lp++;
             }
-            swap(lp,rp);
-
+            arr[rp] = arr[lp];
             while (lp!=rp && arr[rp] >= baseNum){
                 rp--;
             }
-            swap(lp,rp);
+            arr[lp] = arr[rp];
         }
         arr[lp] = baseNum;
         quick(arr,left,lp-1);
         quick(arr,lp+1,right);
+
     }
 
 }

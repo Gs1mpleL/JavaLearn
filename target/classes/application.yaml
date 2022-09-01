@@ -10,6 +10,7 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 2
     consumer:
       # 消费者组
       group-id: test-group
