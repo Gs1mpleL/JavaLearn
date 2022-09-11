@@ -1,4 +1,4 @@
-package com.wanfeng.javalearn.Springboot测试;
+package com.wanfeng.javalearn.Spring测试;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
