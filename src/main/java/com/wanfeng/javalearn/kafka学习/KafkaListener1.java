@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 public class KafkaListener1 {
     @KafkaHandler
     public void receive(String msg){
-        log.info("1号接收到消息[{}]",msg);
+        log.info("DEV环境接收到消息[{}]",msg);
     }
 }

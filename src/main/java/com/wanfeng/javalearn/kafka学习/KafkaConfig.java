@@ -24,7 +24,7 @@ public class KafkaConfig {
     @Bean
     public NewTopic newTopic() {
         // 创建 topic，指定 名称、分区数、副本数
-        return new NewTopic("hello-kafka-test-topic", 3, (short) 2);
+        return new NewTopic("hello-kafka-test-topic", 2, (short) 2);
     }
 
 }
